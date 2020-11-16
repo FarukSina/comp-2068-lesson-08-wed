@@ -4,6 +4,8 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 app.use(cors());
+const port = process.env.PORT || 4000;
+
 
 // Mongo access
 const mongoose = require('mongoose');
@@ -29,4 +31,4 @@ const { handle404s, errorHandler } = require('./errorHandling');
 app.use(handle404s);
 app.use(errorHandler);
 
-app.listen(process.env.PORT  || 4000, () => console.log("Always watching... on port 4000"));
+app.listen(port, () => console.log(`Always watching... on port ${port}`));
