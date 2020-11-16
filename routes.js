@@ -1,5 +1,5 @@
 module.exports = router => {
-  require('./routes/quotes')(router);
+  require('./routes/people')(router);
 
   return router;
 };
