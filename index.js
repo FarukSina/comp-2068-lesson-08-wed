@@ -7,7 +7,7 @@ app.use(cors());
 
 // Mongo access
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -29,4 +29,4 @@ const { handle404s, errorHandler } = require('./errorHandling');
 app.use(handle404s);
 app.use(errorHandler);
 
-app.listen(4000, () => console.log("Always watching... on port 4000"));
+app.listen(process.env.PORT  || 4000, () => console.log("Always watching... on port 4000"));
