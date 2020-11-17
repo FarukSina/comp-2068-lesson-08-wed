@@ -24,7 +24,7 @@ export default function PeopleList() {
 //   }, []);
 const deletePerson = (id) => {
     axios
-      .post(SERVER_URL +"destroy/"+ id)
+      .post(SERVER_URL +"people/destroy/"+ id)
       .then((res) => {
         console.log(res.data);
       })

@@ -2,7 +2,7 @@ import Axios from "axios";
 import {SERVER_URL} from "../links"
 export const createPerson = (data, callback) => {
   Axios.post(
-    SERVER_URL,
+    SERVER_URL + "people",
     data,
   )
     .then((res) => {

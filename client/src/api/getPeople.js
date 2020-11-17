@@ -1,7 +1,8 @@
 import axios from "axios";
+import { SERVER_URL } from "../links";
 
 export const getPeople = (callback) => {
-  axios.get("http://localhost:4000/people")
+  axios.get(SERVER_URL +"people")
     .then((res) => {
       console.log("get all people", res);
       callback(res.data);
