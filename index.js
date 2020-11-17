@@ -5,6 +5,7 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 const port = process.env.PORT || 4000;
+const path = require("path");
 
 
 // Mongo access
@@ -30,5 +31,16 @@ app.use(router);
 const { handle404s, errorHandler } = require('./errorHandling');
 app.use(handle404s);
 app.use(errorHandler);
+
+// Heroku Build static if its in production mode
+
+if(process.env.NODE_ENV === "production"){
+  // Static Folder
+  app.use(express.static('client/build'))
+  
+  app.get('*', (req,res)=>{
+    res.sendFile(path.resolve(__dirnamem, "client", "build", "index.html"))
+  })
+}
 
 app.listen(port, () => console.log(`Always watching... on port ${port}`));

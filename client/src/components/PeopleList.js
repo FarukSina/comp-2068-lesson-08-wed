@@ -34,9 +34,9 @@ const deletePerson = (id) => {
   };
    
 return (
-    <div>
+    <div className="table-responsive">
       <h3>All People</h3>
-      <table className="table">
+      <table className="table" >
         <thead className="thead-light">
           <tr>
             <th>Name</th>

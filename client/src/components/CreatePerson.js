@@ -7,7 +7,7 @@ const CreatePerson = () => {
   const [person, setPerson] = useState({
     name: "",
     age: 0,
-    gender: "",
+    gender: "Male",
     date: new Date(),
   });
 
@@ -53,7 +53,9 @@ const CreatePerson = () => {
           <label>Age: </label>
           <input
             name="age"
-            type="text"
+            type="number"
+            min= "0"
+            max="75"
             required
             className="form-control"
             value={person.age}
@@ -62,14 +64,13 @@ const CreatePerson = () => {
         </div>
         <div className="form-group">
           <label>Gender</label>
-          <input
-            name="gender"
-            type="text"
-            required
-            className="form-control"
-            value={person.gender}
-            onChange={onChange}
-          />
+          <select name="gender" id="text"
+          className="form-control" 
+          required
+          onChange={onChange}
+          ><option>Male</option>
+          <option >Female</option>
+          </select>
         </div>
         <div className="form-group">
           <label>Date :</label>

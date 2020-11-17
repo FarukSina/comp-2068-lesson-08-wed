@@ -13,9 +13,11 @@ function App() {
         <div className="container">
           <NavBar />
           <br />
+          <Switch>
           <Route path="/" exact component={PeopleList} />
-          <Route path="/people/:id" component={EditPerson} />
           <Route path="/people" exact component={CreatePerson} />
+          <Route path="/people/:id" component={EditPerson} />
+          </Switch>
         </div>
       </Router>
     </div>

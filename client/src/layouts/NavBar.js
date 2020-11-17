@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className={`navbar-container ${classes.container}`}>
+    <div className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.logo}>
           <Link to="/">
-            <img src="./person.png" alt="people logo"></img>
+            <img src="person.png" alt="people logo"></img>
           </Link>
         </div>
         <div className={classes.links}>
