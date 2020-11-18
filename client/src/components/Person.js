@@ -9,7 +9,7 @@ const Person = (props) => {
       <td>{props.people.gender}</td>
       <td>{props.people.date.substring(0, 10)}</td>
       <td>
-        <Link to={"/person/" + props.people._id}  className={` ${classes.actions} ${classes.border} btn btn-primary `}>edit</Link>
+        <Link to={"/people/" + props.people._id}  className={` ${classes.actions} ${classes.border} btn btn-primary `}>edit</Link>
         <a
           href="#"
           onClick={() => {
