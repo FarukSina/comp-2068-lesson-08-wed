@@ -29,7 +29,7 @@ app.use(router);
 
 // error handling
 const { handle404s, errorHandler } = require('./errorHandling');
-app.use(handle404s);
+//app.use(handle404s);
 app.use(errorHandler);
 
 // Heroku Build static if its in production mode
