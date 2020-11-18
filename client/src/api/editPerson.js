@@ -2,7 +2,7 @@ import Axios from "axios";
 import {SERVER_URL} from "../links"
 export const editPerson = (id, data, callback) => {
   Axios.post(
-    "/update/" + id,
+    "/people/update/" + id,
     data,
   )
     .then((res) => {
